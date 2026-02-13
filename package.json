@@ -7,7 +7,10 @@
   "scripts": {
     "dev": "nodemon --config nodemon.json",
     "start": "bun run output/Client/main.js",
-    "build": "bun build packages/Client/main.js --outdir output/bot/main.js"
+    "build": "bun build packages/Client/main.js --outdir output/bot/main.js",
+    "dashboard:dev": "npm --prefix Dashboard run dev",
+    "dashboard:build": "npm --prefix Dashboard run build",
+    "dashboard:start": "npm --prefix Dashboard run start"
   },
   "devDependencies": {
     "@types/bun": "latest",
