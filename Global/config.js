@@ -1,14 +1,11 @@
 export default {
-  mongo: "mongodb+srv://admin:QEb5WL6lzgiq6x0x@cluster0.65ey1vw.mongodb.net/pegadev?appName=pegadev",
+  mongo: process.env.MONGO_URI || "mongodb://127.0.0.1:27017/pegadev",
   discord: {
-    //General
-    guildId: "1447334878738645006",
-    token: "MTQ2MjEzMzg2Mjk4ODY0NDY0MA.GGunfi.Dy_RJ2pTC4LoNls0nHZJP4T1RWQff1J8ptl9Z8",
-    owners: ["746066222310883339", "948975442159886398"],
-
-    // Channels
-    welcomeChannel:"1467683742582575316",
-    InviteLog:"1467672452271444170",
-    defaultRole: "1463983350065659925"
+    guildId: process.env.DISCORD_GUILD_ID || "",
+    token: process.env.DISCORD_TOKEN || "",
+    owners: (process.env.DISCORD_OWNERS || "").split(",").filter(Boolean),
+    welcomeChannel: process.env.DISCORD_WELCOME_CHANNEL || "",
+    InviteLog: process.env.DISCORD_INVITE_LOG || "",
+    defaultRole: process.env.DISCORD_DEFAULT_ROLE || ""
   }
 };
