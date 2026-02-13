@@ -1,0 +1,8 @@
+{
+  "exec": "bun run ./Client/main.js",
+  "watch": [
+    "./Global/**/*",
+    "./Client/**/*"
+  ],
+  "ext": "js, ts, jsx, tsx" 
+}

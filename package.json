@@ -1,0 +1,33 @@
+{
+  "name": "pegabilisim-base-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "Client/main.js",
+  "scripts": {
+    "dev": "nodemon --config nodemon.json",
+    "start": "bun run output/Client/main.js",
+    "build": "bun build packages/Client/main.js --outdir output/bot/main.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20",
+    "eslib": "^0.2.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@discordjs/rest": "^2.6.0",
+    "@discordjs/voice": "^0.19.0",
+    "canvas": "^3.2.1",
+    "chalk": "^5.6.2",
+    "discord-invite": "^4.0.8",
+    "discord.js": "^14.25.1",
+    "glob": "^13.0.0",
+    "mongoose": "^9.1.5",
+    "musicard": "^3.0.1",
+    "node-base64-image": "^2.2.0",
+    "sharp": "^0.34.5",
+    "skia-canvas": "^3.0.8"
+  }
+}
